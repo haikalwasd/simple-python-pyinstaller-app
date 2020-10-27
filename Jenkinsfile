@@ -1,13 +1,10 @@
 pipeline {
     agent none
-    options {
-        skipStagesAfterUnstable()
-    }
     stages {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:3.7-alpine'
+                    image 'python:2-alpine'
                 }
             }
             steps {
